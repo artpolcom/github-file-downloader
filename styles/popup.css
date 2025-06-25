@@ -1,0 +1,108 @@
+/* playwrite-dk-loopet-300; used for the website logo */
+@font-face {
+  font-display: swap;
+  font-family: 'Playwrite DK Loopet';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/playwrite-dk-loopet-v5-latin-300.woff2') format('woff2'); 
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f105;
+    /* Track color */
+    border-radius: 2px;
+}
+
+/* Scrollbar thumb color */
+::-webkit-scrollbar-thumb {
+    background: #ffffff4d;
+    border-radius: 2px;
+}
+
+/* Thumb color on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    width: 360px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Noto Sans", Helvetica, Arial, sans-serif;
+    color: #d4d4d8;
+    background: #18181b;
+    position: relative;
+}
+
+div#default-state-container {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    letter-spacing: .2px;
+    line-height: 1.5;
+    padding: 18px;
+    position: relative;
+    z-index: 3;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+p,
+span a {
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0;
+}
+
+.demo-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 7px 3px #7b83b63b;
+}
+
+div#footer {
+    gap: .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: .09rem solid #8080809e;
+    padding-top: 1.7rem;
+    margin-top: 1.2rem;
+}
+
+#footer-brand-cont {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: "Playwrite DK Loopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    cursor: pointer;
+    transition: all 100ms;
+    color: #dbd8d8f0;
+}
+
+#footer-brand-cont:hover {
+    color: rgb(227, 226, 226);
+}
+
+#website-link {
+    text-decoration: none;
+    color: inherit;
+}
