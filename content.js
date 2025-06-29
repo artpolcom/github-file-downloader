@@ -1,4 +1,4 @@
-// Setting an injection flag in order to avoid repeated injections from background.js
+// Setting injection flag in order to avoid repeated injections from background.js
 window.__GITHUB_FILE_DOWNLOADER_EXTENSION_LOADED__ = true;
 
 // Tracking injection state, attempts to run an injection, and last URL
@@ -7,10 +7,10 @@ let lastUrl = window.location.href;
 let injectionAttempt = 0;
 const MAX_ATTEMPTS = 10;
 
-// Regex to avoid injection on pages for individual files
+// Regex to avoid injection when individual files are being browsed
 const urlRegex = /\/blob\//i;
 
-// Selector of the element that displays data about files and folders
+// Selector of GitHub element that contains data on files and folders
 const fileTableElementSelector = '[aria-labelledby="folders-and-files"]';
 
 // Function to save/delete selected files to/from local storage
@@ -21,7 +21,8 @@ function handleFileSelection(el) {
         return
     }
 
-    const localStorageItem = window.localStorage.getItem("github-ext-downloader-files") || "[]"; // Default to empty array
+    // Defaults to empty array to prevent crashes
+    const localStorageItem = window.localStorage.getItem("github-ext-downloader-files") || "[]"; 
     const parsedArray = JSON.parse(localStorageItem);
 
     const fileLink = element.getAttribute("data-github-ext-direct-download-link");
